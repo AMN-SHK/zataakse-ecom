@@ -1,0 +1,136 @@
+.filter-panel {
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.filter-section {
+  margin-bottom: 40px;
+}
+
+.filter-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
+.custom-checkbox {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  cursor: pointer;
+  background: white;
+  flex-shrink: 0;
+}
+
+.custom-checkbox.checked {
+  background: #e67e22;
+  border-color: #e67e22;
+}
+
+.custom-checkbox.checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 1px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  display: none;
+}
+
+.price-range {
+  padding: 10px 0;
+}
+
+.price-range span {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.price-slider {
+  width: 100%;
+  height: 2px;
+  -webkit-appearance: none;
+  background: #ddd;
+  outline: none;
+  margin: 25px 0;
+  position: relative;
+}
+
+.price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #e67e22;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+  margin-top: -3px;
+}
+
+.price-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #e67e22;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+}
+
+.price-slider::-moz-range-track {
+  height: 2px;
+  background: #ddd;
+}
+
+.price-range-values {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.price-range-values span {
+  margin: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .filter-panel {
+    padding: 20px;
+    margin-bottom: 0;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+  }
+}
+
+/* Optional hover state */
+.checkbox-label:hover .custom-checkbox:not(.checked) {
+  border-color: #ccc;
+}
